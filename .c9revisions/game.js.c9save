@@ -1,5 +1,0 @@
-{"ts":1344250320349,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
-{"ts":1344250539004,"patch":[[{"diffs":[[1,"var ctx = document.getElementById(\"canvas\").getContext(\"2d\");"]],"start1":0,"start2":0,"length1":0,"length2":61}]],"length":61,"saved":false}
-{"ts":1344250634385,"patch":[[{"diffs":[[-1,"var ctx = document.getElementById(\"canvas\").getContext(\"2d\")"],[1,"window.onload = function () {\n}"],[0,";"]],"start1":0,"start2":0,"length1":61,"length2":32}]],"length":32,"saved":false}
-{"ts":1344250639973,"patch":[[{"diffs":[[0,"on () {\n"],[1,"    alert(\"Hai\");\n"],[0,"};"]],"start1":22,"start2":22,"length1":10,"length2":28}]],"length":50,"saved":false}
-{"ts":1344250685788,"patch":[[{"diffs":[[0,"    "],[-1,"alert(\"Hai"],[1,"var ctx = document.getElementById(\"canvas\").getContext(\"2d"],[0,"\");\n"]],"start1":30,"start2":30,"length1":18,"length2":66}]],"length":98,"saved":false}
