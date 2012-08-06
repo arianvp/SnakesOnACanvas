@@ -16,16 +16,12 @@ $(document).ready(function(){
     var ctx = $("#canvas")[0].getContext("2d");
     var width = $("#canvas").width();
     var height = $("#canvas").height();
-    var direction = "right";
-
     
-    var snake = new Array(4);
-    
-    snake[0] = new SnakePart(3,0);
-    snake[1] = new SnakePart(2,0);
-    snake[2] = new SnakePart(1,0);
-    snake[3] = new SnakePart(0,0);
-
+    var direction;
+    var snake;
+    var score;
+    var running;
+    var food;
 
     $(document).keydown(function(e){
         switch (e.which) {
@@ -66,25 +62,77 @@ $(document).ready(function(){
             y++
         }
         
-        var tail = snake.pop();
-        tail.x = x;
-        tail.y = y;
+        // hit the left or the top
+        if (x == -1 || y == -1) {
+            running = false;
+
+        }
+        
+        // hit the right or the bottom
+        if (x == width / 10 || y == height / 10) {
+            running = false;
+        }
+        
+        snake.forEach(function(part) {
+            if (x == part.x && y == part.y) {
+                running = false;
+            }
+        });
+        if (running == false) { return }
+        var tail;
+        if (x == food.x && y == food.y) {
+            tail = new SnakePart(x,y);
+            spawnFood();
+        } else {
+            
+            tail = snake.pop();
+            tail.x = x;
+            tail.y = y;
+        }
+        
+        
         snake.unshift(tail);
         
         ctx.fillStyle = "black";
         ctx.fillRect(0,0,width,height);
+        food.paint(ctx);
         snake.forEach(function(part){
             part.paint(ctx);
         });
+
     }
     
-    var lastTime = Date.now();
-    (function loop() {
-
-        render();
-        setTimeout(function(){requestAnimationFrame(loop);},30);
-        var deltaTime = currentTime - lastTime;
+    function init() {
+        direction = "right";
         
+        snake = [];
+        var length = 10;
+        
+        for (var i = length - 1; i >= 0; i--)
+        {
+
+            snake.push(new SnakePart(i,0));
+        }
+
+        
+        score = 0;
+        spawnFood();
+        running = true;
+
+    }
+    init();
+    (function loop() {
+        render();
+        
+        if (running) {
+            setTimeout(function() {
+                requestAnimationFrame(loop);
+            }, 60);
+        }
     })();
     
+    function spawnFood() {
+        food = new SnakePart(Math.random()*(width - 10) / 10 << 0,
+            Math.random()*(height - 10) / 10 << 0);
+    }
 });
