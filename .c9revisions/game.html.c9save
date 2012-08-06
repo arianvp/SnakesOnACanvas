@@ -1,0 +1,8 @@
+{"ts":1344249968469,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1344250190763,"patch":[[{"diffs":[[1,"<!DOCTYPE html>\n<html>\n    <head>\n        <script src=\"http://code.jquery.com/jquery-1.7.2.min.js\"></script> \n    </head>\n    <body>\n    </body>\n</html>"]],"start1":0,"start2":0,"length1":0,"length2":152}]],"length":152,"saved":false}
+{"ts":1344250301624,"patch":[[{"diffs":[[0," <body>\n"],[1,"        <canvas id=\"canvas\"></canvas>\n"],[0,"    </bo"]],"start1":125,"start2":125,"length1":16,"length2":54}]],"length":190,"saved":false}
+{"ts":1344250307891,"patch":[[{"diffs":[[0,"canvas\">"],[1,"\n        "],[0,"</canvas"]],"start1":153,"start2":153,"length1":16,"length2":25}]],"length":199,"saved":false}
+{"ts":1344250371367,"patch":[[{"diffs":[[0,"\n    <head>\n"],[1,"        <link rel=\"stylesheet\" type=\"text/css\" href=\"game.css\" />\n"],[0,"        <scr"]],"start1":22,"start2":22,"length1":24,"length2":90}]],"length":265,"saved":false}
+{"ts":1344250448779,"patch":[[{"diffs":[[0,"rc=\""],[-1,"http://code.jquery.com"],[1,"//ajax.aspnetcdn.com/ajax/jQuery"],[0,"/jqu"]],"start1":117,"start2":117,"length1":30,"length2":40}]],"length":275,"saved":false}
+{"ts":1344250489833,"patch":[[{"diffs":[[0,"\" />"],[-1,"\n        <script src=\"//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js\"></script>"],[0," \n  "]],"start1":95,"start2":95,"length1":93,"length2":8}]],"length":190,"saved":false}
+{"ts":1344250657820,"patch":[[{"diffs":[[0,".css\" />"],[-1," "],[1,"\n        <script src=\"game.js\"></script>"],[0,"\n    </h"]],"start1":91,"start2":91,"length1":17,"length2":56}]],"length":229,"saved":false}
