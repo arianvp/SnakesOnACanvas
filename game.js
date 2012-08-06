@@ -77,9 +77,14 @@ $(document).ready(function(){
             part.paint(ctx);
         });
     }
+    
+    var lastTime = Date.now();
     (function loop() {
-        requestAnimationFrame(loop);
+
         render();
+        setTimeout(function(){requestAnimationFrame(loop);},30);
+        var deltaTime = currentTime - lastTime;
+        
     })();
     
 });
